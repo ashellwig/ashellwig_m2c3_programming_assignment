@@ -1,0 +1,20 @@
+##
+## .gitignore
+## CSC160 Programming Assignment Template
+## Ashton Hellwig
+##
+
+# Tex
+doc/user_docs/main.*
+!doc/user_docs/main.bib
+!doc/user_docs/main.tex
+!doc/user_docs/ashellwig_c2p2_userdocs.pdf
+
+# CPP
+*.bc
+*.bin
+*.native
+*.o
+*.out
+*.s
+**/build/**
