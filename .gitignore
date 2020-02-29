@@ -18,3 +18,13 @@ doc/user_docs/main.*
 *.out
 *.s
 **/build/**
+
+# Automake
+**/autom4te.cache/**
+*.m4
+*.h.in
+configure
+depcomp
+install-sh
+Makefile.in
+missing
