@@ -1,14 +1,13 @@
-//===-- general_functions.h - global functions definitions =-----*- C++ -*-===//
-//
-// Module 2 Chapter 2 Programming Assignment
+// Module 2 Chapter 3 Programming Assignment
 // Ashton Scott Hellwig
 // CSC 160: Introduction to Programming (C++)
 // 29 Feb 2020
 //===----------------------------------------------------------------------===//
 ///
 /// \file
-/// This file contains global function declarations used to calculate values
-/// needed for Chapter 2 Program 2's solution in fuel range.
+/// This file contains function declarations used to read the input file's data
+/// and generate the output file requested of the problem after calculating
+/// total ticket sales.
 ///
 //===----------------------------------------------------------------------===//
 #ifndef CHAPTER3_HH_INCLUDED

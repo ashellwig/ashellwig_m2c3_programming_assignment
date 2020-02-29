@@ -8,13 +8,13 @@
 
 \documentclass[a4paper, 11pt]{article}
   % Packages
-  \usepackage[utf8]{inputenc}  % Encoding
+  \usepackage[utf8]{inputenc}         % Encoding
   \usepackage[english]{babel}         % Internationalization
   \usepackage{times}                  % Times New Roman font
   \usepackage{soul}                   % Highlighting
   \usepackage{hyperref}               % Links (internal and external)
   \usepackage{fancyhdr}               % Headers and footers
-  \usepackage[dvipsnames]{xcolor}  % Text Colors
+  \usepackage[dvipsnames]{xcolor}     % Text Colors
   \usepackage{listings}               % Code Snippets
   \usepackage[section]{algorithm}     % For TOC support
   \usepackage{algpseudocode}          % Algorithmic notation environments
@@ -43,16 +43,16 @@
   \usepackage{mdframed}               % Colored box environments
   \usepackage{float}                  % Floating Environments 
   \usepackage{aliascnt}               %
-  \usepackage[                        % Bibliography management
-    backend=biber,%
-    style=apa%
-  ]{biblatex}
+  % \usepackage[                        % Bibliography management
+    % backend=biber,%
+    % style=apa%
+  % ]{biblatex}
 
   % Bibliography Setup
-  \addbibresource{main.bib}
-  \newcommand{\CiteSection}[2]{%
-    (\autocite{#1}, ~\S {#1})%
-  }
+  % \addbibresource{main.bib}
+  % \newcommand{\CiteSection}[2]{%
+    % (\autocite{#1}, ~\S {#1})%
+  % }
 
 %   \UseRawInputEncoding
 
@@ -322,7 +322,6 @@ Sale amount = $6493750.00
             \begin{lstlisting}[language=bash]
 cd ~/Downloads/ashellwig_m2c3_programming_assignment
             \end{lstlisting}
-          \item
           \item Compile the program using GNU automake after switching to the
             source directory:
             \begin{lstlisting}[%
