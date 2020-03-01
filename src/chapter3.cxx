@@ -16,6 +16,6 @@
 /**
  * \brief Output's "Hello" to stdout.
  */
-static void chapter3::sayHello() { std::cout << "Hello, world!" << std::endl; }
+void chapter3::sayHello() { std::cout << "Hello, world!" << std::endl; }
 
 // vim: set et ts=2 sw=2 ft=cpp:

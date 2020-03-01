@@ -14,7 +14,7 @@
 #define CHAPTER3_HH_INCLUDED
 
 namespace chapter3 {
-static void sayHello();
+void sayHello();
 }
 
 #endif // !CHAPTER3_HH_INCLUDED

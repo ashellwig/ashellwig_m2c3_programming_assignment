@@ -1,5 +1,5 @@
 USER_DOCS_DIR = \
-	/home/ahellwig/Documents/School/CSC160/Module-2/Programming-Assignments/Chapter2/doc/user_docs
+	/home/ahellwig/Documents/School/CSC160/Module-2/Programming-Assignments/ashellwig_m2c3_programming_assignment/doc/user_docs
 
 .PHONY = all
 all: user-doc-build user-doc-clean
@@ -9,9 +9,9 @@ all: user-doc-build user-doc-clean
 user-doc-clean:
 	rm -rf \
 	$(USER_DOCS_DIR)/*.aux $(USER_DOCS_DIR)/*.bbl $(USER_DOCS_DIR)/*.blg \
-	$(USER_DOCS_DIR)/*.idx \
+	$(USER_DOCS_DIR)/*.bst $(USER_DOCS_DIR)/*.idx \
 	$(USER_DOCS_DIR)/*.ind $(USER_DOCS_DIR)/*.lof $(USER_DOCS_DIR)/*.lot \
-	$(USER_DOCS_DIR)/*.out \
+	$(USER_DOCS_DIR)/*.out $(USER_DOCS_DIR)/*.loc \
 	$(USER_DOCS_DIR)/*.toc $(USER_DOCS_DIR)/*.acn $(USER_DOCS_DIR)/*.acr \
 	$(USER_DOCS_DIR)/*.alg \
 	$(USER_DOCS_DIR)/*.glg $(USER_DOCS_DIR)/*.glo $(USER_DOCS_DIR)/*.gls \

@@ -8,19 +8,16 @@
 ///
 //===----------------------------------------------------------------------===//
 
-#include "../include/chapter3.hh"          /** chapter2::calcFuelRange */
+#include "../include/chapter3.hh"          /** chapter3::sayHello */
 #include "../include/general_functions.hh" /** general_functions::pauseprompt */
-#include <iostream>                        /** std::cout, std::endl */
 
 /**
  * \brief Performs the steps to execute the main application.
- *
- * \param argc Number of arguments provided.
- * \param argv Positional argument provided.
- * \return int The exit code of the program.
  */
-int main(int argc, char *argv[]) {
+int main() {
   chapter3::sayHello();
+
+  general_functions::pauseprompt();
 
   return 0;
 }
