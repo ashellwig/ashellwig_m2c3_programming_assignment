@@ -226,7 +226,8 @@
     \subsection{Data}
       We know our output data must be output to a text document titled
         \texttt{Ch3\_Ex5Out.txt} (we chose the .txt extension to help
-        reproducibility).
+        reproducibility). See Section \ref{sec:filetypes} for input and output
+        file formats.
 
       \begin{table}[h!]
         \begin{tabular}{ ||l|l|| }
@@ -360,7 +361,34 @@ cd ~/Downloads/ashellwig_m2c3_programming_assignment/bin
 
   % Appendix
   % \newpage
-  % \appendix
+  \section{Input/Output File Formats}\label{sec:filetypes}
+    \noindent\begin{minipage}{.45\textwidth}
+      \begin{figure}[H]
+        \begin{tabular}{ |ll| }
+          \hline
+          250 &5750 \\
+          100 &28000 \\
+          50  &35750 \\
+          25  &18750 \\
+          \hline
+        \end{tabular}
+        \centering
+        \caption{Input File Format}
+      \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{.45\textwidth}
+      \begin{lstlisting}[%
+        language=bash,%
+        columns=flexible,%
+        caption={%
+          Output File Format%
+        },%
+        label=outputfileformat%
+    ]
+Number of tickets sold = 88250
+Sale amount = $6493750.00
+      \end{lstlisting}
+    \end{minipage}
 
   % Images
   % \section{Images}
