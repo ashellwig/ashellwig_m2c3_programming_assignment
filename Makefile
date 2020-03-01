@@ -17,12 +17,11 @@ SRC := $(wildcard src/*.cxx)
 INCLUDES := include
 OBJS := $(addprefix out/obj/, $(notdir $(SRC:.cxx=.o)))
 
-
 # --- Rules ---
 all: debug user-doc-release clean
 clean: user-doc-clean
 	$(RM) -f out/obj/*.o
-clean-all: clean user-doc-clean
+clean-all: clean user-doc-clean-all
 	$(RM) -f out/bin/*.bin
 	$(RM) -f out/doc/user_docs.pdf
 # Debug Build
@@ -34,7 +33,7 @@ out/obj/%.o: src/%.cxx
 
 # Doc
 user-doc-release: user-doc-build user-doc-clean
-	cp -R $(USER_DOC_DIR)/main.pdf out/doc/user_docs.pdf
+	cp -R doc/user_docs/main.pdf out/doc/user_docs.pdf
 user-doc-build:
 	$(MAKE) -C doc/user_docs user-doc-build
 user-doc-clean:

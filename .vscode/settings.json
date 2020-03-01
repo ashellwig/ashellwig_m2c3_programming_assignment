@@ -80,6 +80,7 @@
     "yml"
   ],
   "cSpell.words": [
-    "autoreconf"
+    "autoreconf",
+    "latexmk"
   ]
 }

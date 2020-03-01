@@ -311,28 +311,32 @@ Sale amount = $6493750.00
     \subsection{Build}
       The following are instructions with two use cases:
       \begin{itemize}
-        \item With CMake
+        \item With GNU Make
         \item Bundled Release
       \end{itemize}
-      \subsubsection{With Automake}
+      \subsubsection{With GNU Make}
         \begin{enumerate}
-          \item Navigate to the unzipped folder containing the binary,
+          \item Navigate to the unzipped folder containing the project,
             \textbf{with a terminal emulator or command prompt}, this will
             (most likely) mean running:
             \begin{lstlisting}[language=bash]
 cd ~/Downloads/ashellwig_m2c3_programming_assignment
             \end{lstlisting}
-          \item Compile the program using GNU automake after switching to the
-            source directory:
+          \item Compile the program and documentation\footnote{\textbf{Note%
+            }: This requires the whole \texttt{texlive} suite as well as
+            \texttt{latexmk} to be installed.} using GNU automake after
+            switching to the source directory:
             \begin{lstlisting}[%
               language=bash,%
               caption={Chapter 3 Program Build Commands},%
             ]
-export PROJECT_SOURCE_DIR="${PWD}"
+make all # With docs
+make debug # Without docs
 
-autoreconf --install
-./configure
-make INPUT_DATA="${PWD}/data/Ch3_Ex5Data.txt"
+xdg-open out/doc/user_docs.pdf # View Docs
+./out/bin/ashellwig_m2c3_programming_assignment.bin # Run program
+
+make clean-all # Removes object files, binaries, and docs
             \end{lstlisting}
           \end{enumerate}
       \subsubsection{Bundled Release}
