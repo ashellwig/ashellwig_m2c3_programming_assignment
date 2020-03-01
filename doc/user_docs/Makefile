@@ -8,24 +8,34 @@ all: user-doc-build user-doc-clean
 ## Clean
 user-doc-clean:
 	rm -rf \
-	$(USER_DOCS_DIR)/*.aux $(USER_DOCS_DIR)/*.bbl $(USER_DOCS_DIR)/*.blg \
-	$(USER_DOCS_DIR)/*.bst $(USER_DOCS_DIR)/*.idx \
-	$(USER_DOCS_DIR)/*.ind $(USER_DOCS_DIR)/*.lof $(USER_DOCS_DIR)/*.lot \
-	$(USER_DOCS_DIR)/*.out $(USER_DOCS_DIR)/*.loc \
-	$(USER_DOCS_DIR)/*.toc $(USER_DOCS_DIR)/*.acn $(USER_DOCS_DIR)/*.acr \
-	$(USER_DOCS_DIR)/*.alg \
-	$(USER_DOCS_DIR)/*.glg $(USER_DOCS_DIR)/*.glo $(USER_DOCS_DIR)/*.gls \
-	$(USER_DOCS_DIR)/*.ist \
-	$(USER_DOCS_DIR)/*.fls $(USER_DOCS_DIR)/*.log \
-	$(USER_DOCS_DIR)/*.fdblatexmk \
-	$(USER_DOCS_DIR)/*.fdb_latexmk $(USER_DOCS_DIR)/*.synctex.gz
+	*.aux \
+	*.bbl \
+	*.blg \
+	*.bst \
+	*.idx \
+	*.ind \
+	*.lof \
+	*.lot \
+	*.out \
+	*.loc \
+	*.toc \
+	*.acn \
+	*.acr \
+	*.alg \
+	*.glg \
+	*.glo \
+	*.gls \
+	*.ist \
+	*.fls \
+	*.log \
+	*.fdb_latexmk \
+	*.lol \
+	*.loa \
+	*.synctex.gz
 user-doc-clean-all: user-doc-clean
-	$(user-doc-clean)
-	rm -rf $(USER_DOCS_DIR)/*.pdf
+	rm -rf *.pdf
 ## Build
-user-doc-build: $(USER_DOCS_DIR)/%.tex
-$(USER_DOCS_DIR)/%.tex: user-doc-clean
-	$(user-doc-clean)
-	cd $(USER_DOCS_DIR)
-	latexmk -synctex=1 -interaction=nonstopmode -file-line-error \
-	-jobname=$(USER_DOCS_DIR)/main -pdf $(USER_DOCS_DIR)/main.tex
+user-doc-build: %.tex
+%.tex: user-doc-clean
+	latexmk -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error \
+	-jobname=main -pdf main.tex
