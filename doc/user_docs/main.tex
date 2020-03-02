@@ -298,7 +298,40 @@ Sale amount = $6493750.00
         \Function{main}{}
           %% Variables
         \Comment{--Variable Declarations--}
-          \State $num\gets 0$
+          \State $numBoxTickets\gets 0$
+          \State $priceBoxTickets\gets 250$
+          \State $numSidelineTickets\gets 0$
+          \State $priceSidelineTickets\gets 100$
+          \State $numPremiumTickets\gets 0$
+          \State $pricePremiumTickets\gets 50$
+          \State $numGATickets\gets 0$
+          \State $priceGATickets\gets 25$
+          \State $totalSalesValue\gets 0$
+          \State $totalTicketsSold\gets 0$
+
+        \State\Comment{---Open Files---}
+          \State $inputFile = ./data/infile.txt$
+          \State $outputFile = ./data/outfile.txt$
+          \State
+          \State\While{$line\in inputFile \neq \mathbf{eof}$}
+            \State$numBoxTickets\gets\Call{readline}{line1, col2}$
+            \State$numSidelineTickets\gets\Call{readline}{line2, col2}$
+            \State$numPremiumTickets\gets\Call{readline}{line3, col2}$
+            \State$numGATickets\gets\Call{readline}{line4, col2}$
+          \EndWhile
+          \State
+          \State
+            $totalNumTickets\gets numBoxTickets + numSidelineTickets +
+            numPremiumTickets + numGATickets$
+          \State
+          \State
+            $totalSalesValue\gets$ \\$((priceBoxTickets * numBoxTickets) +
+            (priceSidelineTickets * numSidelineTickets) +
+            (pricePremiumTickets * numPremiumTickets) +
+            (priceGATickets * numGATickets))$
+          \State
+          \State $outputFile\gets$ ``Num tickets sold: '' $+ totalNumTickets$
+          \State $outputFile+\gets$ ``Sale amount: '' $+ totalSalesValue$
         \EndFunction
       \end{algorithmic}
       \label{alg:c3program}
