@@ -10,7 +10,16 @@ PROGRAM := out/bin/ashellwig_m2c3_programming_assignment.bin
 CXX := /usr/bin/g++
 RM := /usr/bin/rm
 
-CXXFLAGS := -c -std=c++2a -Wall -Wextra -ggdb
+INPUT_FILE_PATH := data/Ch3_Ex5Data.txt
+OUTPUT_FILE_PATH := out/bin/Ch3_Ex5Out.txt
+
+CXXFLAGS := -c \
+	-std=c++2a \
+	-Wall \
+	-Wextra \
+	-ggdb
+	# -DIN_FILE_PATH=$(INPUT_FILE_PATH) \
+	# -DOUT_FILE_PATH=$(OUTPUT_FILE_PATH)
 LFLAGS := -std=c++2a -ggdb
 
 SRC := $(wildcard src/*.cxx)
@@ -23,6 +32,7 @@ clean: user-doc-clean
 	$(RM) -f out/obj/*.o
 clean-all: clean user-doc-clean-all
 	$(RM) -f out/bin/*.bin
+	$(RM) -f out/bin/*.txt
 	$(RM) -f out/doc/user_docs.pdf
 # Debug Build
 debug: $(OBJS)

@@ -332,10 +332,8 @@ cd ~/Downloads/ashellwig_m2c3_programming_assignment
               language=bash,%
               caption={Chapter 3 Program Build Commands},%
             ]
-make all # With docs
-make debug # Without docs
+make debug
 
-xdg-open out/doc/user_docs.pdf # View Docs
 ./out/bin/ashellwig_m2c3_programming_assignment.bin # Run program
 
 make clean-all # Removes object files, binaries, and docs
@@ -397,8 +395,19 @@ Sale amount = $6493750.00
   \section{Images}
     \begin{sidewaysfigure}
       \includegraphics[%
-        width={650px}%
+        width={\textwidth}%
       ]{compile.png}
       \caption{Compiling Chapter 3`s Program}
     \end{sidewaysfigure}
+    \begin{sidewaysfigure}
+      \includegraphics[%
+        width={\textwidth}%
+      ]{run.png}
+      \caption{Running Chapter 3`s Program}
+    \end{sidewaysfigure}
+    \begin{figure}
+      \includegraphics[%
+      ]{outfile.png}
+      \caption{Chapter 3`s Output File}
+    \end{figure}
 \end{document}
