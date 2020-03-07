@@ -1,22 +1,31 @@
-// Module 2 Chapter 3 Programming Assignment
+/**
+ * @file general_functions.cxx
+ * @author Ashton Scott Hellwig (ahellwig@student.cccs.edu)
+ * @brief This file contains global function definitions used to emulate
+ *   system-dependent Windows libraries.
+ * @date 2020-03-07
+ *
+ * Assignment: Module 2 Chapter 4 Programming Assignment
+ * Description: This file contains global function definitions used to emulate
+ *   system-dependent Windows libraries.
+ * Instructor: Jeffrey Hemmes
+ * Course:
+ *   [CSC 160] Introduction to Programming (C++)
+ * Date: 07 March 2020
+ */
+
+// Module 2 Chapter 4 Programming Assignment
 // Ashton Scott Hellwig
 // CSC 160: Introduction to Programming (C++)
-// 29 Feb 2020
-//===----------------------------------------------------------------------===//
-///
-/// \file
-/// This file contains global function definitions used to emulate
-/// system-dependent Windows libraries.
-///
-//===----------------------------------------------------------------------===//
+// 07 March 2020
 
 #include "../include/general_functions.hh"
 #include <iostream>
 
 /**
- * \brief Prompts the user to press <RET> to continue running the program.
+ * @brief Prompts the user to press <RET> to continue running the program.
  *
- * \return int Exit code.
+ * @return int Exit code.
  */
 void general_functions::pauseprompt() {
   std::cout << "Press enter to continue...";

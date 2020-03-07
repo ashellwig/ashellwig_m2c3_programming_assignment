@@ -1,5 +1,5 @@
 USER_DOCS_DIR = \
-	/home/ahellwig/Documents/School/CSC160/Module-2/Programming-Assignments/ashellwig_m2c3_programming_assignment/doc/user_docs
+	/home/ahellwig/Documents/School/CSC160/Module-2/Programming-Assignments/ashellwig_m2c4_programming_assignment/doc/user_docs
 
 .PHONY = all
 all: user-doc-build user-doc-clean

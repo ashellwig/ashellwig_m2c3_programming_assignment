@@ -1,25 +1,22 @@
 # vim: set ts=2 sw=2 ft=sh:
-## Module 2 Chapter 3 Program
+## Module 2 Chapter 4 Program
 ## Ashton S. Hellwig
-## Date: 29 Feburary 2020
-## CSC160
+## Date: 07 March 2020
+## Instructor: Jeffrey Hemmes
+## Course:
+##   [CSC160] Introduction to Programming Langauges (C++)
 ##
 
 # --- Variables ---
-PROGRAM := out/bin/ashellwig_m2c3_programming_assignment.bin
+PROGRAM := out/bin/ashellwig_m2c4_programming_assignment.bin
 CXX := /usr/bin/g++
 RM := /usr/bin/rm
-
-INPUT_FILE_PATH := data/Ch3_Ex5Data.txt
-OUTPUT_FILE_PATH := out/bin/Ch3_Ex5Out.txt
 
 CXXFLAGS := -c \
 	-std=c++2a \
 	-Wall \
 	-Wextra \
 	-ggdb
-	# -DIN_FILE_PATH=$(INPUT_FILE_PATH) \
-	# -DOUT_FILE_PATH=$(OUTPUT_FILE_PATH)
 LFLAGS := -std=c++2a -ggdb
 
 SRC := $(wildcard src/*.cxx)
